@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Madero - Sistema de Reservas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Madero</h1>
+    <p>Gestión de clientes y reservas</p>
+    <nav>
+      <ul>
+        <li><a href="#page-inicio">Inicio</a></li>
+        <li><a href="#page-reservas">Reservas</a></li>
+        <li><a href="#page-registrar">Nueva Reserva</a></li> </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="page-inicio" class="page-section">
+      <div class="hero-inicio">
+        <h2>Madero</h2>
+        <p>Restaurante & Co.</p>
+              </div>
+    </section>
+
+    <section id="page-reservas" class="page-section">
+      <div id="lista">
+        <h2>Listado de Reservas</h2>
+        <table id="tablaReservas">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Persona</th>
+              <th>Fecha</th>
+              <th>Hora</th>
+              <th>Personas</th>
+              <th>Ubicación</th>
+              <th>Tipo</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="page-registrar" class="page-section">
+      
+      <section class="formulario-unico">
+        <h2>Registrar Nueva Reserva</h2>
+        <form id="reservaCompletaForm">
+          
+          <fieldset>
+            <legend>Datos del Cliente</legend>
+            <label>Nombre completo:</label>
+            <input type="text" id="nombre" required>
+            <label>Teléfono:</label>
+            <input type="text" id="telefono" required>
+            <label>Email:</label>
+            <input type="email" id="email" required>
+            <label>Dirección:</label>
+            <input type="text" id="direccion" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Datos de la Reserva</legend>
+            <label>Fecha:</label>
+            <input type="date" id="fecha" required>
+            <label>Hora:</label>
+            <input type="time" id="hora" required>
+            <label>Cantidad de personas:</label>
+            <input type="number" id="personas" min="1" required>
+            <label>Ubicación:</label>
+            <select id="ubicacion">
+              <option value="adentro">Adentro</option>
+              <option value="afuera">Afuera</option>
+            </select>
+            <label>Tipo de pedido:</label>
+            <input type="text" id="tipo_pedido" placeholder="Ej: Almuerzo, Cena, etc.">
+          </fieldset>
+
+          <button type="submit">Guardar Reserva Completa</button>
+        </form>
+      </section>
+      
+    </section>
+    
+  </main>
+  <footer>
+    <p>© 2025 Restaurante Madero</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
